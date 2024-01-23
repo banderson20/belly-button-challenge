@@ -36,7 +36,7 @@ d3.json(url).then(function(data) {
         orientation: "h"  
       }];
 
-      Plotly.newPlot("plot", data);
+      Plotly.newPlot("bar", data);
     };
 
 
@@ -74,8 +74,8 @@ d3.json(url).then(function(data) {
       let newRowbbtype = table.append('tr').append('td').text(`bbtype: ${selectedMetaData.bbtype}`)
       let newRowWfreq = table.append('tr').append('td').text(`wfreq: ${selectedMetaData.wfreq}`)
 
-      Plotly.newPlot("plot", updatedData);
-      Plotly.newPlot("bubble-chart", updatedData2);
+      Plotly.newPlot("bar", updatedData);
+      Plotly.newPlot("bubble", updatedData2);
     };
 
     init();
@@ -93,10 +93,11 @@ d3.json(url).then(function(data) {
           color: otu_ids
         }
       }];
-      Plotly.newPlot("bubble-chart", data);
+      Plotly.newPlot("bubble", data);
     };
 
       init2();
+
   
 
 });
